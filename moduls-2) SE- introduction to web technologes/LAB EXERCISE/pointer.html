@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Program: Pointer Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+        }
+
+        header {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        pre {
+            background: #1e272e;
+            color: #00ffcc;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #2c3e50;
+            color: #fff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>C Program: Pointer Usage</h1>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int num = 10;
+    int *ptr;   // Pointer declaration
+
+    ptr = &amp;num; // Assign address of num to pointer
+
+    printf("Original value of num: %d\n", num);
+
+    // Modify value using pointer
+    *ptr = 20;
+
+    printf("Modified value of num using pointer: %d\n", num);
+
+    return 0;
+}
+        </pre>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 C Pointer Example</p>
+    </footer>
+
+</body>
+
+</html>

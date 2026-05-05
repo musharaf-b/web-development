@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Program: Break & Continue</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+        }
+
+        header {
+            background: #192a56;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        pre {
+            background: #1e272e;
+            color: #00ffcc;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #192a56;
+            color: #fff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>C Program: Break & Continue Example</h1>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int i;
+
+    // Using break statement
+    printf("Using break (stop at 5):\n");
+    for(i = 1; i &lt;= 10; i++) {
+        if(i == 5) {
+            break;
+        }
+        printf("%d ", i);
+    }
+
+    // Using continue statement
+    printf("\n\nUsing continue (skip 3):\n");
+    for(i = 1; i &lt;= 10; i++) {
+        if(i == 3) {
+            continue;
+        }
+        printf("%d ", i);
+    }
+
+    return 0;
+}
+        </pre>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 C Break & Continue Example</p>
+    </footer>
+
+</body>
+
+</html>

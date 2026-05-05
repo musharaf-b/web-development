@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Compiler Installation & Hello World</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+            color: #333;
+        }
+
+        header {
+            background: #1e272e;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 20px auto;
+        }
+
+        .card {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #1e272e;
+        }
+
+        pre {
+            background: #2d3436;
+            color: #00ffcc;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #1e272e;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Install C Compiler & Run Hello World</h1>
+    </header>
+
+    <div class="container">
+
+        <div class="card">
+            <h2>Step 1: Install C Compiler (GCC)</h2>
+            <p><b>Windows:</b> Download and install MinGW or use Code::Blocks with GCC.</p>
+            <p><b>Linux:</b> Run <code>sudo apt install build-essential</code></p>
+            <p><b>Mac:</b> Install Xcode Command Line Tools using <code>xcode-select --install</code></p>
+        </div>
+
+        <div class="card">
+            <h2>Step 2: Configure IDE</h2>
+            <p>Install an IDE like VS Code, Code::Blocks, or Dev-C++.</p>
+            <p>Set compiler path (GCC) in IDE settings.</p>
+        </div>
+
+        <div class="card">
+            <h2>Step 3: Write Hello World Program</h2>
+            <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Hello, World!");
+    return 0;
+}
+        </pre>
+        </div>
+
+        <div class="card">
+            <h2>Step 4: Compile & Run</h2>
+            <pre>
+gcc hello.c -o hello
+./hello
+        </pre>
+            <p>Output:</p>
+            <pre>
+Hello, World!
+        </pre>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 C Programming Guide</p>
+    </footer>
+
+</body>
+
+</html>

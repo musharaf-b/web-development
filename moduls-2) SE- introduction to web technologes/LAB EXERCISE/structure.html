@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Program: Structure Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+        }
+
+        header {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        pre {
+            background: #1e272e;
+            color: #00ffcc;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #2c3e50;
+            color: #fff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>C Program: Structure & Array of Structures</h1>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <pre>
+#include &lt;stdio.h&gt;
+
+struct Student {
+    char name[50];
+    int roll;
+    float marks;
+};
+
+int main() {
+    struct Student s[3];
+    int i;
+
+    // Input details
+    for(i = 0; i &lt; 3; i++) {
+        printf("Enter details for student %d:\n", i + 1);
+
+        printf("Name: ");
+        scanf("%s", s[i].name);
+
+        printf("Roll Number: ");
+        scanf("%d", &amp;s[i].roll);
+
+        printf("Marks: ");
+        scanf("%f", &amp;s[i].marks);
+    }
+
+    // Display details
+    printf("\nStudent Details:\n");
+    for(i = 0; i &lt; 3; i++) {
+        printf("\nStudent %d\n", i + 1);
+        printf("Name: %s\n", s[i].name);
+        printf("Roll Number: %d\n", s[i].roll);
+        printf("Marks: %.2f\n", s[i].marks);
+    }
+
+    return 0;
+}
+        </pre>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 C Structure Example</p>
+    </footer>
+
+</body>
+
+</html>

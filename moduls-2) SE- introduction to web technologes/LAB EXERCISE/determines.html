@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Largest & Smallest Finder</title>
+
+<style>
+    body {
+        font-family: Arial;
+        background: #f2f2f2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .box {
+        background: #fff;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        text-align: center;
+    }
+
+    input {
+        padding: 10px;
+        margin: 8px;
+        width: 150px;
+    }
+
+    button {
+        padding: 10px 20px;
+        margin-top: 10px;
+        border: none;
+        background: #28a745;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #218838;
+    }
+
+    p {
+        font-weight: bold;
+        margin-top: 10px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Find Largest & Smallest</h2>
+
+    <input type="number" id="n1" placeholder="Enter first number"><br>
+    <input type="number" id="n2" placeholder="Enter second number"><br>
+    <input type="number" id="n3" placeholder="Enter third number"><br>
+
+    <button onclick="findIfElse()">Using If-Else</button>
+    <button onclick="findSwitch()">Using Switch</button>
+
+    <p id="result"></p>
+</div>
+
+<script>
+
+// ✅ Using if-else
+function findIfElse() {
+    let a = Number(document.getElementById("n1").value);
+    let b = Number(document.getElementById("n2").value);
+    let c = Number(document.getElementById("n3").value);
+
+    let largest, smallest;
+
+    // Largest
+    if (a >= b && a >= c) {
+        largest = a;
+    } else if (b >= a && b >= c) {
+        largest = b;
+    } else {
+        largest = c;
+    }
+
+    // Smallest
+    if (a <= b && a <= c) {
+        smallest = a;
+    } else if (b <= a && b <= c) {
+        smallest = b;
+    } else {
+        smallest = c;
+    }
+
+    document.getElementById("result").innerText =
+        "If-Else → Largest: " + largest + ", Smallest: " + smallest;
+}
+
+
+// ✅ Using switch-case
+function findSwitch() {
+    let a = Number(document.getElementById("n1").value);
+    let b = Number(document.getElementById("n2").value);
+    let c = Number(document.getElementById("n3").value);
+
+    let largest, smallest;
+
+    // Largest using switch(true)
+    switch(true) {
+        case (a >= b && a >= c):
+            largest = a;
+            break;
+        case (b >= a && b >= c):
+            largest = b;
+            break;
+        default:
+            largest = c;
+    }
+
+    // Smallest using switch(true)
+    switch(true) {
+        case (a <= b && a <= c):
+            smallest = a;
+            break;
+        case (b <= a && b <= c):
+            smallest = b;
+            break;
+        default:
+            smallest = c;
+    }
+
+    document.getElementById("result").innerText =
+        "Switch → Largest: " + largest + ", Smallest: " + smallest;
+}
+
+</script>
+
+</body>
+</html>

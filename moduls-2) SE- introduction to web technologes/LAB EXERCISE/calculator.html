@@ -1,0 +1,81 @@
+```html id="calc001"
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator in C</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        pre {
+            background-color: #1e1e1e;
+            color: #00ffcc;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+        h2 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Simple Calculator C Program</h2>
+
+<pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    float num1, num2;
+    char op;
+
+    printf("Enter first number: ");
+    scanf("%f", &num1);
+
+    printf("Enter operator (+, -, *, /, %%): ");
+    scanf(" %c", &op);
+
+    printf("Enter second number: ");
+    scanf("%f", &num2);
+
+    switch(op) {
+        case '+':
+            printf("Result: %.2f\n", num1 + num2);
+            break;
+
+        case '-':
+            printf("Result: %.2f\n", num1 - num2);
+            break;
+
+        case '*':
+            printf("Result: %.2f\n", num1 * num2);
+            break;
+
+        case '/':
+            if(num2 != 0)
+                printf("Result: %.2f\n", num1 / num2);
+            else
+                printf("Error: Division by zero!\n");
+            break;
+
+        case '%':
+            if((int)num2 != 0)
+                printf("Result: %d\n", (int)num1 % (int)num2);
+            else
+                printf("Error: Modulus by zero!\n");
+            break;
+
+        default:
+            printf("Error: Invalid operator!\n");
+    }
+
+    return 0;
+}
+</pre>
+
+</body>
+</html>
+```

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Program Operations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2f7;
+            margin: 0;
+        }
+
+        header {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        pre {
+            background: #1e272e;
+            color: #00ffcc;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #2c3e50;
+            color: #fff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>C Program: Arithmetic, Relational & Logical Operations</h1>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int a, b;
+
+    printf("Enter first integer: ");
+    scanf("%d", &amp;a);
+
+    printf("Enter second integer: ");
+    scanf("%d", &amp;b);
+
+    printf("\n--- Arithmetic Operations ---\n");
+    printf("Addition: %d\n", a + b);
+    printf("Subtraction: %d\n", a - b);
+    printf("Multiplication: %d\n", a * b);
+
+    if (b != 0) {
+        printf("Division: %d\n", a / b);
+        printf("Modulus: %d\n", a % b);
+    } else {
+        printf("Division and Modulus not possible (division by zero)\n");
+    }
+
+    printf("\n--- Relational Operations ---\n");
+    printf("a == b : %d\n", a == b);
+    printf("a != b : %d\n", a != b);
+    printf("a > b  : %d\n", a > b);
+    printf("a < b  : %d\n", a < b);
+    printf("a >= b : %d\n", a >= b);
+    printf("a <= b : %d\n", a <= b);
+
+    printf("\n--- Logical Operations ---\n");
+    printf("(a &gt; 0 &amp;&amp; b &gt; 0) : %d\n", (a > 0 && b > 0));
+    printf("(a &gt; 0 || b &gt; 0) : %d\n", (a > 0 || b > 0));
+    printf("!(a &gt; 0) : %d\n", !(a > 0));
+
+    return 0;
+}
+        </pre>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 C Programming Operations Example</p>
+    </footer>
+
+</body>
+
+</html>
